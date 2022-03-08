@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ticket</title>
+    <script src="https://kit.fontawesome.com/9b60a7c614.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div style="max-width:70%">
+        <div style="display: block; width: 95%; border: solid 1px rgb(201, 201, 201); border-radius: 10px;">
+            <div style=" margin-top : -20px ;text-align: center; display: block; background: rgb(0, 110, 255); width: 100%; color: white; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                <h2>Aerolinea Cielo</h2>
+                <h1 class="text-white m-3" th:text="'Vuelo '+${flight}"></h1>
+                <div style="display: flex; justify-content: space-between;">
+                    <h1 style="margin-left: 2rem;" th:text="${origin}"></h1>
+                    <h1><i class="fa-solid fa-plane"></i></h1>
+                    <h1 style="margin-right: 2rem;" th:text="${destiny}"></h1>
+                </div>
+            </div>
+            <div style="display: flex;">
+                <div class = "" style="width: 50%; min-height: 8rem; background: rgb(236, 236, 236); padding:80px 0 80px 0; border-right: solid 1px rgb(197, 197, 197);">
+                    <div style="text-align: center;">
+                        <div style="width: 100%; display: flex; justify-content: space-between;">
+                            <div style="display: block; width:50%;">
+                                <label for="">Puerta abordaje</label>
+                                <h2 th:text="${bGate}"></h2>
+                            </div>
+                            <div style="display: block; width:50%;">
+                                <label for="">Asiento</label>
+                                <h2 th:text="${seatNo}"></h2>
+                            </div>
+                        </div>
+                        <div style="width: 100%; display: flex; justify-content: space-between;">
+                            <div style="display: block; width: 50%;">
+                                <label for="">Puerta Emergencia</label>
+                                <h2 th:text="${emergencyD}"></h2>
+                            </div>
+                            <div style="display: block; width: 50%;">
+                                <label for="">Pos</label>
+                                <h2 th:text="${pos}"></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 50%; padding:80px 0 80px 0;">
+                    <div style="text-align: center;">
+                        <div style="display: block; width: 100%;">
+                            <div>
+                                <label for="">Salida</label>
+                                <h2 th:text="${depart}"></h2>
+                            </div>
+                        </div>
+                        <div style="display: block; width: 100%;">
+                            <div>
+                                <label for="">Llegada</label>
+                                <h2 th:text="${arrive}"></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="display: flex; width: 100%; border-top: solid 1px rgb(207, 207, 207);">
+                <div style="display: block; width: 75%;">
+                    <div style = "margin-top: 2rem;">
+                        <label for="">Pasajero</label>
+                        <h5 th:text="${passengerName}"></h5>
+                    </div>
+                    <div>
+                        <label for="">Pasaporte</label>
+                        <h5 th:text="${passport}"></h5>
+                    </div>
+                </div>
+                <div style="display: block; width: 25%; text-align: center;">
+                    <img width="128" height="128" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Codigo_QR.svg/1200px-Codigo_QR.svg.png" alt=""/>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
